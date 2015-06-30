@@ -1,0 +1,19 @@
+MaxLevel===2
+/**==========第0级==========**/
+----- CategoryLevel===0
+----- IsSaveParent===false
+----- FirstCategoryNameAndUrl===Movies & TV==http://www.walmart.com/cp/4096
+----- FirstCategoryNameAndUrl===Music==http://www.walmart.com/cp/4104
+----- FirstCategoryNameAndUrl===Computers==http://www.walmart.com/cp/3951  
+----- FirstCategoryNameAndUrl===Electronics==http://www.walmart.com/cp/3944
+
+
+/**==========第1级==========**/
+----- CategoryLevel===1
+----- IsSaveParent===true
+----- Reg_GetCategory===<a[\s]*?class="browseIn\scp-link"[\s]*?href="(?<CategoryUrl>[^"]*?)"[^>]*?>[\s]*?<span[^>]*?>(?<CategoryName>[^<]*?)</span>
+----- RegexReplace_ChangeCategoryUrl===(?<url>[\s\S]*?)\?[\s\S]+---->${url}
+----- Reg_HasProductList===<span\sclass="[^"]*?numResults[^"]*?">[\d,]+\sResults</span>
+----- Reg_GetCode===<span[^>]*?>Shop\sby\sCategory</span>[\s\S]*?<div\sclass="cp-accordionContainer">((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+/**================================================================================
+================================================================================**/

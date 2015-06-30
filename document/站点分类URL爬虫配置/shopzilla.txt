@@ -1,0 +1,14 @@
+http://www.shopzilla.com/category-guide
+
+----- MaxLevel===5
+----- IsGetHotword===true
+/**==========µÚ0¼¶==========**/
+----- CategoryLevel===0
+----- IsSaveParent===false
+----- Reg_GetCode===<div\sclass="frame_center_border">((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+----- Reg_GetCategory===<li><a[^>]*?href="(?<CategoryUrl>[^"]*?)">(?<CategoryName>[^<]*?)</a></li>
+----- RegexReplace_ChangeCategoryUrl===products==top-searches
+----- Reg_HasProductList===<span[^>]*?>we8sdfsdfsfresults</span>
+----- Reg_GetHotword===<div[^>]*?id="sr_C"[^>]*?>((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>==<a[^>]*?>(?<keyword>[^>]*?)</a>
+/**================================================================================
+================================================================================**/

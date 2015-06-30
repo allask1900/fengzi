@@ -1,0 +1,159 @@
+
+body
+{
+	font-size: 12px;
+	line-height:18px;
+	height:100%; 
+	width:100%;
+	margin:0; 
+	padding:0;
+	overflow:visible;
+	}
+A:link
+{
+    COLOR: #0045b7;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    COLOR: #0045b7;
+    TEXT-DECORATION: none
+}
+A:active
+{
+    COLOR: #0045b7;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    COLOR: red;
+    TEXT-DECORATION: none
+}
+.noselectactive
+{ 
+	CURSOR: pointer;
+   BACKGROUND-COLOR: #ffffff;
+   width:100%;line-height:20px;
+	margin-bottom:5px;
+}
+.selectactive
+{
+    CURSOR: pointer;
+    BACKGROUND-COLOR: #f4f4f4;
+    width:100%;line-height:20px;
+	margin-bottom:5px;
+}
+
+TD
+{
+	font-size:12px;
+	}
+.btn
+{
+	HEIGHT: 24px;
+	margin-top:5px;
+	font: bold 70% 'trebuchet ms',helvetica,sans-serif; 
+	border:1px solid #738ECE;
+	background-color:#C6E3F7;
+	cursor:pointer;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffffff',EndColorStr='#C6E3F7');   
+	}
+	
+#messagebox
+{
+	margin-top:100px;
+	width:460px;
+	font-size:12px;
+	line-height:24px;
+	margin-left:150px;
+	border:1px solid #738ECE;
+}
+#messagebox #title
+{
+	font-weight:bolder;
+	color:#ffffff;
+	text-indent:14px;
+	BACKGROUND-IMAGE:url(../images/headerbg.gif);
+}
+#messagebox #message
+{
+	padding-top:10px;
+	height:100px;
+	font-size:14px;
+	background-color:#ffffff;
+	text-align:center;
+	vertical-align:middle;
+}
+#messagebox #message .btn
+{
+	margin-top:10px;
+	}
+#TableContent
+{
+	height:auto;
+	}
+.NavTitle
+{
+	font-size:20px;
+	line-height:24px;
+	color:#222222;
+	text-indent:5px;
+	font-weight:bolder;
+	margin-bottom:5px;
+	margin-left:5px;
+	margin-right:0px;
+	BORDER-bottom:#9CB2C6 3px solid;
+	}
+.TB
+{
+	line-height:24px;
+	BORDER:#9CB2C6 1px solid;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:10px;
+	margin-right:20px;
+	width:96%;
+	border-spacing:0px;
+	padding:2px;text-indent:5px;
+	}
+.TB .Title
+{
+	text-indent:5px;
+	font-weight:bolder;
+	color:#000;
+	background-color:#f3f3f3;
+	BORDER-bottom:#9CB2C6 1px solid;
+	}
+.TB .Item
+{
+	line-height:20px;
+	margin-bottom:5px;
+	}	
+.LBL
+{
+	BORDER:#f4f4f4 1px solid;
+	width:100%;
+	}
+.laybox
+{
+	padding:5px;
+	BORDER:#444444 2px solid;
+	width:96%;
+	height:60px;
+	overflow:scroll;
+	}
+.selected
+{
+	border:1px solid #738ECE;
+	background-color:#C6E3F7;
+	line-height:20px;
+	width:100px;
+	}
+	
+.unselected
+{
+	border:1px solid #738ECE;
+	background-color:#ffffff;
+	line-height:20px;
+	width:100px;
+}

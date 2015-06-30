@@ -1,0 +1,67 @@
+﻿.spantext
+{
+    height:19px;
+    border:solid 1px #7F9DB9;
+    padding-top:2px;
+    padding-left:3px;
+}
+.pop_imgbutton
+{
+     width:21px;
+     height:19px;
+     border:0px;
+     padding-left:5px;
+     padding-right:5px;
+     vertical-align:text-bottom;
+     cursor:hand;
+}
+/* 弹出POP窗口专用 */
+.pop_window
+    {
+        border:solid 1px #5A5D60;
+        position:absolute;
+        z-index:999;
+    }
+    .pop_window_title
+    {
+        width:auto;
+        height:21px;
+        /*background-image:url(../imgs/sgv/table_title_bg.gif);*/
+        background-color:#A0B8D1;
+        vertical-align:middle;
+        padding-top:2px;
+        padding-right:3px;
+    }
+    .pop_window_body
+    {
+        width:auto;
+        text-align:center;
+        vertical-align:middle;
+        background-color:#EFEFEF;
+        overflow:hidden;
+        table-layout:fixed;
+        border-top:solid 1px #666;
+        border-bottom:solid 1px #CCC;
+    }
+    .pop_window_status
+    {
+        width:auto;
+        height:14px;
+        /*background-image:url(../imgs/sgv/table_title_bg.gif);*/
+        background-color:#DEE7EF;
+        padding-top:1px;
+        padding-right:1px;
+        text-align:right;
+        color:#CCC;
+    }
+    .iframeclass
+    {
+        width:100%;
+        height:100%;
+        border-style:none;
+        border-width:0px;
+        overflow:hidden;
+        margin:0px;
+    }
+  
+/*#################*/

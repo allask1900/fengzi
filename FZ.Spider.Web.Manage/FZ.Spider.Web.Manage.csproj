@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03C28C3F-5F3F-4D99-B320-5D89DF5F7F20}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PS.Web.Manage</RootNamespace>
+    <AssemblyName>PS.Web.Manage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager">
+      <HintPath>..\Library\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Library\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\Left.aspx.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frame\Left.aspx.designer.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\MainFrame.aspx.cs">
+      <DependentUpon>MainFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frame\MainFrame.aspx.designer.cs">
+      <DependentUpon>MainFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frame\Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search\ProductEditor.aspx.cs">
+      <DependentUpon>ProductEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\ProductEditor.aspx.designer.cs">
+      <DependentUpon>ProductEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Brand.aspx.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\Brand.aspx.designer.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\CategoryManage.aspx.cs">
+      <DependentUpon>CategoryManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\CategoryManage.aspx.designer.cs">
+      <DependentUpon>CategoryManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Tags.aspx.cs">
+      <DependentUpon>Tags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\Tags.aspx.designer.cs">
+      <DependentUpon>Tags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SpiderTest.aspx.cs">
+      <DependentUpon>SpiderTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SpiderTest.aspx.designer.cs">
+      <DependentUpon>SpiderTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\SysLogList.aspx.cs">
+      <DependentUpon>SysLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logging\SysLogList.aspx.designer.cs">
+      <DependentUpon>SysLogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\logview.aspx.cs">
+      <DependentUpon>logview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logging\logview.aspx.designer.cs">
+      <DependentUpon>logview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Action.aspx.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\Action.aspx.designer.cs">
+      <DependentUpon>Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SiteCategoryConfig.aspx.cs">
+      <DependentUpon>SiteCategoryConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SiteCategoryConfig.aspx.designer.cs">
+      <DependentUpon>SiteCategoryConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ProductEditorList.aspx.cs">
+      <DependentUpon>ProductEditorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\ProductEditorList.aspx.designer.cs">
+      <DependentUpon>ProductEditorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\HotWord.aspx.cs">
+      <DependentUpon>HotWord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\HotWord.aspx.designer.cs">
+      <DependentUpon>HotWord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SiteCategoryList.aspx.cs">
+      <DependentUpon>SiteCategoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SiteCategoryList.aspx.designer.cs">
+      <DependentUpon>SiteCategoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\TagValue.aspx.cs">
+      <DependentUpon>TagValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\TagValue.aspx.designer.cs">
+      <DependentUpon>TagValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ProductEditorType.aspx.cs">
+      <DependentUpon>ProductEditorType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\ProductEditorType.aspx.designer.cs">
+      <DependentUpon>ProductEditorType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SpiderWorkQueue.aspx.cs">
+      <DependentUpon>SpiderWorkQueue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SpiderWorkQueue.aspx.designer.cs">
+      <DependentUpon>SpiderWorkQueue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\AdCategory.aspx.cs">
+      <DependentUpon>AdCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\AdCategory.aspx.designer.cs">
+      <DependentUpon>AdCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\AdGroup.aspx.cs">
+      <DependentUpon>AdGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\AdGroup.aspx.designer.cs">
+      <DependentUpon>AdGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\LongTailKeywords.aspx.cs">
+      <DependentUpon>LongTailKeywords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\LongTailKeywords.aspx.designer.cs">
+      <DependentUpon>LongTailKeywords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\StatPoint.aspx.cs">
+      <DependentUpon>StatPoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\StatPoint.aspx.designer.cs">
+      <DependentUpon>StatPoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\WordAdd.aspx.cs">
+      <DependentUpon>WordAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\WordAdd.aspx.designer.cs">
+      <DependentUpon>WordAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\WordEdit.aspx.cs">
+      <DependentUpon>WordEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\WordEdit.aspx.designer.cs">
+      <DependentUpon>WordEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\GetPageCode.aspx.cs">
+      <DependentUpon>GetPageCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\GetPageCode.aspx.designer.cs">
+      <DependentUpon>GetPageCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Site.aspx.cs">
+      <DependentUpon>Site.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\Site.aspx.designer.cs">
+      <DependentUpon>Site.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SiteCategory.aspx.cs">
+      <DependentUpon>SiteCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SiteCategory.aspx.designer.cs">
+      <DependentUpon>SiteCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SiteConfig.aspx.cs">
+      <DependentUpon>SiteConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SiteConfig.aspx.designer.cs">
+      <DependentUpon>SiteConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SpiderTestConfig.aspx.cs">
+      <DependentUpon>SpiderTestConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search\SpiderTestConfig.aspx.designer.cs">
+      <DependentUpon>SpiderTestConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\WordStat.aspx.cs">
+      <DependentUpon>WordStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\WordStat.aspx.designer.cs">
+      <DependentUpon>WordStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\AdList.aspx.cs">
+      <DependentUpon>AdList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\AdList.aspx.designer.cs">
+      <DependentUpon>AdList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SEM\AdProduct.aspx.cs">
+      <DependentUpon>AdProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SEM\AdProduct.aspx.designer.cs">
+      <DependentUpon>AdProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConf\SystemConfigItem.aspx.cs">
+      <DependentUpon>SystemConfigItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemConf\SystemConfigItem.aspx.designer.cs">
+      <DependentUpon>SystemConfigItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConf\SystemConfig.aspx.cs">
+      <DependentUpon>SystemConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemConf\SystemConfig.aspx.designer.cs">
+      <DependentUpon>SystemConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConf\AppRegister.aspx.cs">
+      <DependentUpon>AppRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemConf\AppRegister.aspx.designer.cs">
+      <DependentUpon>AppRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConf\SystemRegister.aspx.cs">
+      <DependentUpon>SystemRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemConf\SystemRegister.aspx.designer.cs">
+      <DependentUpon>SystemRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConf\Module.aspx.cs">
+      <DependentUpon>Module.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemConf\Module.aspx.designer.cs">
+      <DependentUpon>Module.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\ControlTheme\Control.skin" />
+    <Content Include="App_Themes\GovTheme\Style.skin" />
+    <Content Include="Config\AppSetting.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\Database.Config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\log4net.config" />
+    <Content Include="CSS\Site.css" />
+    <Content Include="Frame\Left.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Search\ProductEditor.aspx" />
+    <Content Include="Search\Brand.aspx" />
+    <Content Include="Search\CategoryManage.aspx" />
+    <Content Include="Search\Tags.aspx" />
+    <Content Include="Search\SpiderTest.aspx" />
+    <Content Include="Logging\SysLogList.aspx" />
+    <Content Include="Logging\logview.aspx" />
+    <Content Include="Search\Action.aspx" />
+    <Content Include="Search\SiteCategoryConfig.aspx" />
+    <Content Include="Search\ProductEditorList.aspx" />
+    <Content Include="SEM\HotWord.aspx" />
+    <Content Include="Search\SiteCategoryList.aspx" />
+    <Content Include="Search\TagValue.aspx" />
+    <Content Include="Search\ProductEditorType.aspx" />
+    <Content Include="Search\SpiderWorkQueue.aspx" />
+    <Content Include="SEM\AdCategory.aspx" />
+    <Content Include="SEM\AdGroup.aspx" />
+    <Content Include="SEM\LongTailKeywords.aspx" />
+    <Content Include="SEM\StatPoint.aspx" />
+    <Content Include="SEM\WordAdd.aspx" />
+    <Content Include="SEM\WordEdit.aspx" />
+    <Content Include="Search\GetPageCode.aspx" />
+    <Content Include="Search\Site.aspx" />
+    <Content Include="Search\SiteCategory.aspx" />
+    <Content Include="Search\SiteConfig.aspx" />
+    <Content Include="Search\SpiderTestConfig.aspx" />
+    <Content Include="SEM\WordStat.aspx" />
+    <Content Include="SEM\AdList.aspx" />
+    <Content Include="SEM\AdProduct.aspx" />
+    <Content Include="SystemConf\SystemConfigItem.aspx" />
+    <Content Include="SystemConf\SystemConfig.aspx" />
+    <Content Include="SystemConf\AppRegister.aspx" />
+    <Content Include="SystemConf\SystemRegister.aspx" />
+    <Content Include="SystemConf\Module.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\GovTheme\Screen.css" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
+    <Content Include="bin\DotNetOpenAuth.AspNet.dll" />
+    <Content Include="bin\DotNetOpenAuth.Core.dll" />
+    <Content Include="bin\DotNetOpenAuth.OAuth.Consumer.dll" />
+    <Content Include="bin\DotNetOpenAuth.OAuth.dll" />
+    <Content Include="bin\DotNetOpenAuth.OpenId.dll" />
+    <Content Include="bin\DotNetOpenAuth.OpenId.RelyingParty.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Membership.OpenAuth.dll" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="CSS\css.css" />
+    <Content Include="CSS\pop.css" />
+    <Content Include="CSS\popwin\dragresize.gif" />
+    <Content Include="CSS\popwin\stop.gif" />
+    <Content Include="CSS\popwin\to_default.gif" />
+    <Content Include="CSS\popwin\to_large.gif" />
+    <Content Include="CSS\screen.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Frame\blank.html" />
+    <Content Include="Frame\bottom.html" />
+    <Content Include="Frame\MainFrame.aspx" />
+    <Content Include="Frame\middel.html" />
+    <Content Include="Frame\Top.aspx" />
+    <Content Include="Images\0No.ICO" />
+    <Content Include="Images\arrow.gif" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\bg_line.gif" />
+    <Content Include="Images\child.jpg" />
+    <Content Include="Images\dl.gif" />
+    <Content Include="Images\hint.ico" />
+    <Content Include="Images\img_down.gif" />
+    <Content Include="Images\img_up.gif" />
+    <Content Include="Images\left.gif" />
+    <Content Include="Images\login_03.gif" />
+    <Content Include="Images\login_05.gif" />
+    <Content Include="Images\login_06.gif" />
+    <Content Include="Images\login_07.gif" />
+    <Content Include="Images\login_08.gif" />
+    <Content Include="Images\main_03.gif" />
+    <Content Include="Images\main_04.gif" />
+    <Content Include="Images\main_05.gif" />
+    <Content Include="Images\main_07.gif" />
+    <Content Include="Images\main_09.gif" />
+    <Content Include="Images\main_11.gif" />
+    <Content Include="Images\main_12.gif" />
+    <Content Include="Images\main_14.gif" />
+    <Content Include="Images\main_16.gif" />
+    <Content Include="Images\main_18.gif" />
+    <Content Include="Images\main_20.gif" />
+    <Content Include="Images\main_21.gif" />
+    <Content Include="Images\main_22.gif" />
+    <Content Include="Images\main_29.gif" />
+    <Content Include="Images\main_30.gif" />
+    <Content Include="Images\main_31.gif" />
+    <Content Include="Images\main_32.gif" />
+    <Content Include="Images\main_34.gif" />
+    <Content Include="Images\main_36.gif" />
+    <Content Include="Images\main_37.gif" />
+    <Content Include="Images\main_39.gif" />
+    <Content Include="Images\main_40.gif" />
+    <Content Include="Images\main_41.gif" />
+    <Content Include="Images\main_45.gif" />
+    <Content Include="Images\main_47.gif" />
+    <Content Include="Images\main_48.gif" />
+    <Content Include="Images\main_51.gif" />
+    <Content Include="Images\main_52.gif" />
+    <Content Include="Images\main_55.gif" />
+    <Content Include="Images\main_55_1.gif" />
+    <Content Include="Images\main_58.gif" />
+    <Content Include="Images\main_59.gif" />
+    <Content Include="Images\main_61.gif" />
+    <Content Include="Images\main_62.gif" />
+    <Content Include="Images\root.jpg" />
+    <Content Include="Images\tb_login.gif" />
+    <Content Include="JavaScript\base.js" />
+    <Content Include="JavaScript\calendar.js" />
+    <Content Include="JavaScript\CheckListOpear.js" />
+    <Content Include="JavaScript\Common.js" />
+    <Content Include="JavaScript\gridSelect.js" />
+    <Content Include="JavaScript\jquery-1.3.2.min.js" />
+    <Content Include="JavaScript\jquery.js" />
+    <Content Include="JavaScript\popwin.js" />
+    <Content Include="JavaScript\RGraph.bar.js" />
+    <Content Include="JavaScript\RGraph.common.adjusting.js" />
+    <Content Include="JavaScript\RGraph.common.annotate.js" />
+    <Content Include="JavaScript\RGraph.common.context.js" />
+    <Content Include="JavaScript\RGraph.common.core.js" />
+    <Content Include="JavaScript\RGraph.common.resizing.js" />
+    <Content Include="JavaScript\RGraph.common.tooltips.js" />
+    <Content Include="JavaScript\RGraph.common.zoom.js" />
+    <Content Include="JavaScript\Tree.js" />
+    <Content Include="Logout.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Themes\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PS.Business\PS.Business.csproj">
+      <Project>{a23cbb6c-9254-4570-aac6-a0d5040a397e}</Project>
+      <Name>PS.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Cache\PS.Cache.csproj">
+      <Project>{d7e89a3c-79d2-4f8b-a128-f0759dfd0d2e}</Project>
+      <Name>PS.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FZ.Spider.Common\FZ.Spider.Common.csproj">
+      <Project>{4266a570-bb93-4631-b9e5-7c327d8ca3e5}</Project>
+      <Name>FZ.Spider.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FZ.Spider.Configuration\FZ.Spider.Configuration.csproj">
+      <Project>{825add4d-8894-469e-af2a-8e8f84280eea}</Project>
+      <Name>FZ.Spider.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FZ.Spider.DataAccess\FZ.Spider.DataAccess.csproj">
+      <Project>{3e8dbd8f-3c11-4715-af57-3a0b37a0b4e0}</Project>
+      <Name>FZ.Spider.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FZ.Spider.Logging\FZ.Spider.Logging.csproj">
+      <Project>{8364270a-7c01-492d-b1c7-434474944eac}</Project>
+      <Name>FZ.Spider.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Search\PS.Search.csproj">
+      <Project>{10f59b92-3d2c-4804-a5f8-1d626969fc30}</Project>
+      <Name>PS.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FZ.Spider.Spider\FZ.Spider.Spider.csproj">
+      <Project>{25087203-94d0-4eab-8911-593782857b82}</Project>
+      <Name>FZ.Spider.Spider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FZ.Spider.Web.WebControl\FZ.Spider.Web.WebControl.csproj">
+      <Project>{89d91f04-9907-43c7-89a1-e98adbf0c5bd}</Project>
+      <Name>FZ.Spider.Web.WebControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10103</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8110</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

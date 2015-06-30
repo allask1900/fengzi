@@ -1,0 +1,15 @@
+E:\digview\digview.com\PS.Configuration\bin\Debug\PS.Configuration.dll
+E:\digview\digview.com\PS.Configuration\bin\Debug\PS.Configuration.pdb
+E:\digview\digview.com\PS.Configuration\obj\Debug\PS.Configuration.dll
+E:\digview\digview.com\PS.Configuration\obj\Debug\PS.Configuration.pdb
+D:\net\Project\digview\digview.com\PS.Configuration\bin\Debug\PS.Configuration.dll
+D:\net\Project\digview\digview.com\PS.Configuration\bin\Debug\PS.Configuration.pdb
+D:\net\Project\digview\digview.com\PS.Configuration\bin\Debug\log4net.dll
+D:\net\Project\digview\digview.com\PS.Configuration\obj\Debug\PS.Configuration.dll
+D:\net\Project\digview\digview.com\PS.Configuration\obj\Debug\PS.Configuration.pdb
+D:\digview\digview.com\PS.Configuration\bin\Debug\PS.Configuration.dll
+D:\digview\digview.com\PS.Configuration\bin\Debug\PS.Configuration.pdb
+D:\digview\digview.com\PS.Configuration\bin\Debug\log4net.dll
+D:\digview\digview.com\PS.Configuration\obj\Debug\PS.Configuration.dll
+D:\digview\digview.com\PS.Configuration\obj\Debug\PS.Configuration.pdb
+D:\digview\digview.com\PS.Configuration\obj\Debug\PS.Configuration.csprojResolveAssemblyReference.cache

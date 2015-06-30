@@ -1,0 +1,48 @@
+﻿MaxLevel===2
+/**==========第0级==========**/
+----- CategoryLevel===0
+----- IsSaveParent===false
+----- Reg_GetCategory===<div[^>]*?><a[\s]*?href="(?<CategoryUrl>[^"]*?)"[^>]*?class="NavXLBold"[^>]*?>(?<CategoryName>[^<]*?)</a></div>
+----- FirstCategoryNameAndUrl===Appliances==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=appliances
+----- FirstCategoryNameAndUrl===Arts, Crafts & Sewing==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=arts-crafts
+----- FirstCategoryNameAndUrl===Automotive==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=automotive
+----- FirstCategoryNameAndUrl===Baby==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=baby-products
+----- FirstCategoryNameAndUrl===Beauty==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=beauty
+----- FirstCategoryNameAndUrl===Cell Phones & Accessories==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=mobile
+----- FirstCategoryNameAndUrl===Clothing & Accessories==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=apparel
+----- FirstCategoryNameAndUrl===Collectibles==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=collectibles
+----- FirstCategoryNameAndUrl===Computers==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=computers
+----- FirstCategoryNameAndUrl===Credit Cards==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=financial
+----- FirstCategoryNameAndUrl===Electronics==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=electronics
+----- FirstCategoryNameAndUrl===Gift Cards Store==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=gift-cards
+----- FirstCategoryNameAndUrl===Grocery & Gourmet Food==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=grocery
+----- FirstCategoryNameAndUrl===Health & Personal Care==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=hpc
+----- FirstCategoryNameAndUrl===Home & Kitchen==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=garden
+----- FirstCategoryNameAndUrl===Industrial & Scientific==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=industrial
+----- FirstCategoryNameAndUrl===Jewelry==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=jewelry
+----- FirstCategoryNameAndUrl===Magazine Subscriptions==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=magazines
+----- FirstCategoryNameAndUrl===Movies & TV==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=movies-tv
+----- FirstCategoryNameAndUrl===MP3 Music==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=digital-music
+----- FirstCategoryNameAndUrl===Music==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=popular
+----- FirstCategoryNameAndUrl===Musical Instruments==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=mi
+----- FirstCategoryNameAndUrl===Office Products==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=office-products
+----- FirstCategoryNameAndUrl===Patio, Lawn & Garden==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=lawngarden
+----- FirstCategoryNameAndUrl===Pet Supplies==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=pets
+----- FirstCategoryNameAndUrl===Shoes==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=shoes
+----- FirstCategoryNameAndUrl===Software==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=software
+----- FirstCategoryNameAndUrl===Sports & Outdoors==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=sporting
+----- FirstCategoryNameAndUrl===Tools & Home Improvement==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=tools
+----- FirstCategoryNameAndUrl===Toys & Games==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=toys-and-games
+----- FirstCategoryNameAndUrl===Video Games==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=videogames
+----- FirstCategoryNameAndUrl===Watches==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=watches
+
+/**==========第1级==========**/
+----- CategoryLevel===1
+----- IsSaveParent===false
+----- Reg_GetCategory===<a[\s]*?href="(?<CategoryUrl>[^"]*?)">[\s]*?<span[\s]*?class="refinementLink"[\s]*?>(?<CategoryName>[^<]*?)</span>
+----- RegexReplace_ChangeCategoryUrl===(?<url>[\s\S]*?)&bbn=[\s\S]+---->${url}
+----- Reg_HasProductList===Showing[^<]*?Results
+----- Reg_GetCode===<h2[^>]*?>Department</h2>[\s]*?<ul[^>]*?>((?<Nested><ul[^>]*>)|</ul>(?<-Nested>)|.*?)*</ul>
+/**================================================================================
+================================================================================**/
+

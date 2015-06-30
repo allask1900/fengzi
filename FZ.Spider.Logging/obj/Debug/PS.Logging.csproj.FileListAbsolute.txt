@@ -1,0 +1,17 @@
+E:\digview\digview.com\PS.Logging\bin\Debug\PS.Logging.dll
+E:\digview\digview.com\PS.Logging\bin\Debug\PS.Logging.pdb
+E:\digview\digview.com\PS.Logging\bin\Debug\log4net.dll
+E:\digview\digview.com\PS.Logging\obj\Debug\PS.Logging.dll
+E:\digview\digview.com\PS.Logging\obj\Debug\PS.Logging.pdb
+E:\digview\digview.com\PS.Logging\obj\Debug\PS.Logging.csprojResolveAssemblyReference.cache
+D:\net\Project\digview\digview.com\PS.Logging\bin\Debug\PS.Logging.dll
+D:\net\Project\digview\digview.com\PS.Logging\bin\Debug\PS.Logging.pdb
+D:\net\Project\digview\digview.com\PS.Logging\bin\Debug\log4net.dll
+D:\net\Project\digview\digview.com\PS.Logging\obj\Debug\PS.Logging.dll
+D:\net\Project\digview\digview.com\PS.Logging\obj\Debug\PS.Logging.pdb
+D:\digview\digview.com\PS.Logging\bin\Debug\PS.Logging.dll
+D:\digview\digview.com\PS.Logging\bin\Debug\PS.Logging.pdb
+D:\digview\digview.com\PS.Logging\bin\Debug\log4net.dll
+D:\digview\digview.com\PS.Logging\obj\Debug\PS.Logging.dll
+D:\digview\digview.com\PS.Logging\obj\Debug\PS.Logging.pdb
+D:\digview\digview.com\PS.Logging\obj\Debug\PS.Logging.csprojResolveAssemblyReference.cache

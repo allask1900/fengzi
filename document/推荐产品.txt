@@ -1,0 +1,94 @@
+<!-- 	 
+16	Electronics
+17	Computers
+25	Movies
+26	Music
+29	Software
+33	Video Games
+IndexBestSellers
+IndexRecommended
+CategoryRecommended
+CategoryBestSellers
+ -->
+/**==========Electronics CategoryRecommended==========**/
+=====CategoryID====		16
+=====CategoryName====	Electronics
+=====EditorType====		CategoryRecommended
+=====Reg_GetASIN====	<span[\s]*?class="zg_rankNumber">[\d]+\.</span><div[\s]*?class="zg_arrowDiv[^>]*?><span[^>]*?></span></div></div><div[^>]*?><div[\s]*?class="zg_image"><div[^>]*?><a[^>]*?href="[^"]*?/dp/(?<asin>[^/]*?)/
+=====URLS====			http://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics/ref=zg_bs_nav_0
+						===http://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics/ref=zg_bs_nav_0#2
+						===http://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics/ref=zg_bs_nav_0#3
+						===http://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics/ref=zg_bs_nav_0#4
+
+/**==========Computers CategoryRecommended==========**/
+=====CategoryID====		17
+=====CategoryName====	Computers
+=====EditorType====		CategoryRecommended
+=====Reg_GetASIN====	<span[\s]*?class="zg_rankNumber">[\d]+\.</span><div[\s]*?class="zg_arrowDiv[^>]*?><span[^>]*?></span></div></div><div[^>]*?><div[\s]*?class="zg_image"><div[^>]*?><a[^>]*?href="[^"]*?/dp/(?<asin>[^/]*?)/
+=====URLS====			http://www.amazon.com/Best-Sellers-Computers-Accessories/zgbs/pc/ref=zg_bs_nav_0
+						===http://www.amazon.com/Best-Sellers-Computers-Accessories/zgbs/pc/ref=zg_bs_nav_0#2
+						===http://www.amazon.com/Best-Sellers-Computers-Accessories/zgbs/pc/ref=zg_bs_nav_0#3
+						===http://www.amazon.com/Best-Sellers-Computers-Accessories/zgbs/pc/ref=zg_bs_nav_0#4
+						
+/**==========Movies CategoryRecommended==========**/
+=====CategoryID====		25
+=====CategoryName====	Movies
+=====EditorType====		CategoryRecommended
+=====Reg_GetASIN====	<span[\s]*?class="zg_rankNumber">[\d]+\.</span><div[\s]*?class="zg_arrowDiv[^>]*?><span[^>]*?></span></div></div><div[^>]*?><div[\s]*?class="zg_image"><div[^>]*?><a[^>]*?href="[^"]*?/dp/(?<asin>[^/]*?)/
+=====URLS====			http://www.amazon.com/best-sellers-movies-TV-DVD-Blu-ray/zgbs/movies-tv/ref=zg_bs_nav_0
+						===http://www.amazon.com/best-sellers-movies-TV-DVD-Blu-ray/zgbs/movies-tv/ref=zg_bs_nav_0#2
+						===http://www.amazon.com/best-sellers-movies-TV-DVD-Blu-ray/zgbs/movies-tv/ref=zg_bs_nav_0#3
+						===http://www.amazon.com/best-sellers-movies-TV-DVD-Blu-ray/zgbs/movies-tv/ref=zg_bs_nav_0#4
+						
+/**==========Music CategoryRecommended==========**/
+=====CategoryID====		26
+=====CategoryName====	Music
+=====EditorType====		CategoryRecommended
+=====Reg_GetASIN====	<span[\s]*?class="zg_rankNumber">[\d]+\.</span><div[\s]*?class="zg_arrowDiv[^>]*?><span[^>]*?></span></div></div><div[^>]*?><div[\s]*?class="zg_image"><div[^>]*?><a[^>]*?href="[^"]*?/dp/(?<asin>[^/]*?)/
+=====URLS====			http://www.amazon.com/best-sellers-music-albums/zgbs/music/ref=zg_bs_nav_0
+						===http://www.amazon.com/best-sellers-music-albums/zgbs/music/ref=zg_bs_nav_0#2
+						===http://www.amazon.com/best-sellers-music-albums/zgbs/music/ref=zg_bs_nav_0#3
+						===http://www.amazon.com/best-sellers-music-albums/zgbs/music/ref=zg_bs_nav_0#4
+						
+/**==========Software CategoryRecommended==========**/
+=====CategoryID====		29
+=====CategoryName====	Software
+=====EditorType====		CategoryRecommended
+=====Reg_GetASIN====	<span[\s]*?class="zg_rankNumber">[\d]+\.</span><div[\s]*?class="zg_arrowDiv[^>]*?><span[^>]*?></span></div></div><div[^>]*?><div[\s]*?class="zg_image"><div[^>]*?><a[^>]*?href="[^"]*?/dp/(?<asin>[^/]*?)/
+=====URLS====			http://www.amazon.com/best-sellers-software/zgbs/software/ref=zg_bs_nav_0
+						===http://www.amazon.com/best-sellers-software/zgbs/software/ref=zg_bs_nav_0#2
+						===http://www.amazon.com/best-sellers-software/zgbs/software/ref=zg_bs_nav_0#3
+						===http://www.amazon.com/best-sellers-software/zgbs/software/ref=zg_bs_nav_0#4
+						
+/**==========Video Games CategoryRecommended==========**/
+=====CategoryID====		33
+=====CategoryName====	Video Games
+=====EditorType====		CategoryRecommended
+=====Reg_GetASIN====	<span[\s]*?class="zg_rankNumber">[\d]+\.</span><div[\s]*?class="zg_arrowDiv[^>]*?><span[^>]*?></span></div></div><div[^>]*?><div[\s]*?class="zg_image"><div[^>]*?><a[^>]*?href="[^"]*?/dp/(?<asin>[^/]*?)/
+=====URLS====			http://www.amazon.com/best-sellers-video-games/zgbs/videogames/ref=zg_bs_nav_0
+						===http://www.amazon.com/best-sellers-video-games/zgbs/videogames/ref=zg_bs_nav_0#2
+						===http://www.amazon.com/best-sellers-video-games/zgbs/videogames/ref=zg_bs_nav_0#3
+						===http://www.amazon.com/best-sellers-video-games/zgbs/videogames/ref=zg_bs_nav_0#4
+						
+/**==========IndexBestSellers==========**/
+=====CategoryID====		0
+=====CategoryName====	
+=====EditorType====		IndexBestSellers
+=====Reg_GetASIN====	<span[\s]*?class="zg_rankNumber">[\d]+\.</span><div[\s]*?class="zg_arrowDiv[^>]*?><span[^>]*?></span></div></div><div[^>]*?><div[\s]*?class="zg_image"><div[^>]*?><a[^>]*?href="[^"]*?/dp/(?<asin>[^/]*?)/
+=====URLS====			http://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics/ref=zg_bs_nav_0
+						===http://www.amazon.com/Best-Sellers-Computers-Accessories/zgbs/pc/ref=zg_bs_nav_0
+						===http://www.amazon.com/best-sellers-movies-TV-DVD-Blu-ray/zgbs/movies-tv/ref=zg_bs_nav_0
+						===http://www.amazon.com/best-sellers-music-albums/zgbs/music/ref=zg_bs_nav_0
+						===http://www.amazon.com/best-sellers-software/zgbs/software/ref=zg_bs_nav_0
+						===http://www.amazon.com/best-sellers-video-games/zgbs/videogames/ref=zg_bs_nav_0
+						
+/**==========IndexRecommended==========**/
+=====CategoryID====		0
+=====CategoryName====	
+=====EditorType====		IndexRecommended
+=====Reg_GetASIN====	<div[\s]*?class="zg_image"><div[^>]*?><a[^>]*?href="[^"]*?/dp/(?<asin>[^/]*?)/
+=====URLS====			http://www.amazon.com/gp/new-releases/electronics/ref=zg_bsnr_nav_0
+						===http://www.amazon.com/gp/new-releases/pc/ref=zg_bsnr_nav_0
+						===http://www.amazon.com/gp/new-releases/music/ref=zg_bsnr_nav_0
+						===http://www.amazon.com/gp/new-releases/movies-tv/ref=zg_bsnr_nav_0
+						===http://www.amazon.com/gp/new-releases/software/ref=zg_bsnr_nav_0

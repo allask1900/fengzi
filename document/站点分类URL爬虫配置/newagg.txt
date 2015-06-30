@@ -1,0 +1,22 @@
+MaxLevel===2
+/**==========第0级==========**/
+----- CategoryLevel===0
+----- IsSaveParent===false 
+----- FirstCategoryNameAndUrl===Movies-TV==http://www.newegg.com/DVD-Blu-ray-Movies-TV/SubCategory/ID-848
+----- FirstCategoryNameAndUrl===Software==http://www.newegg.com/Software/Store 
+----- FirstCategoryNameAndUrl===Computer-Hardware==http://www.newegg.com/Computer-Hardware/Store
+----- FirstCategoryNameAndUrl===PCs-Laptops==http://www.newegg.com/PCs-Laptops/Store
+----- FirstCategoryNameAndUrl===Gaming==http://www.newegg.com/Gaming/Store 
+----- FirstCategoryNameAndUrl===Electronics==http://www.newegg.com/Electronics/Store
+----- FirstCategoryNameAndUrl===Cell-Phones==http://www.newegg.com/Cell-Phones/Store/ID-140
+
+
+
+/**==========第1级==========**/
+----- CategoryLevel===1
+----- IsSaveParent===true
+----- Reg_GetCategory===<dd\sstyle="word-wrap:break-word;">[^>]*?<a[\s]*?href="(?<CategoryUrl>[^"]*?)"[^>]*?title="(?<CategoryName>[^<]*?)"
+----- Reg_HasProductList===<div[\s]*?class="recordCount">Showing[\d\-,\s]*?of[\d\-,\s]*?Products
+----- Reg_GetCode===<div[\s]*?id="blaNavigation"[\s]*?class="blaNavigation">[\s]*?<dl[\s]*?class="categoryList[\s]*?primaryNav">((?<Nested><dl[^>]*>)|</dl>(?<-Nested>)|.*?)*</dl>
+/**================================================================================
+================================================================================**/

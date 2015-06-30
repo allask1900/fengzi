@@ -1,0 +1,1 @@
+exec   sp_addlinkedserver     'RemoteServer','','SQLOLEDB','50.62.139.119,59850'   exec   sp_addlinkedsrvlogin   'RemoteServer','false',null,'ps','#L:SJR:Eidfsfsakj43kjdfkkJH#'goselect count(*) from RemoteServer.SearchSystem.dbo.TB_Search_ProductListgoexec   sp_dropserver   'RemoteServer','droplogins'go

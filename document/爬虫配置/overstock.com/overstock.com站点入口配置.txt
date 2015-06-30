@@ -1,0 +1,20 @@
+MaxLevel===2
+/**==========第0级==========**/
+----- CategoryLevel===0
+----- IsSaveParent===false
+----- FirstCategoryNameAndUrl===Software==http://www.overstock.com/Electronics/Software/2859/cat.html
+----- FirstCategoryNameAndUrl===Computers==http://www.overstock.com/Electronics/Computers-Hardware-Software/7/dept.html
+----- FirstCategoryNameAndUrl===Electronics==http://www.overstock.com/Electronics/2/store.html
+----- FirstCategoryNameAndUrl===Movies==http://www.overstock.com/Books-Movies-Music-Games/Movies/11/dept.html
+----- FirstCategoryNameAndUrl===Music==http://www.overstock.com/Books-Movies-Music-Games/Music/10/dept.html
+----- FirstCategoryNameAndUrl===Video Games==http://www.overstock.com/Books-Movies-Music-Games/PC-Video-Games/12/dept.html
+
+/**==========第1级==========**/
+----- CategoryLevel===1
+----- IsSaveParent===true
+----- Reg_GetCategory===\s<a[\s]*?href="(?<CategoryUrl>[^"]*?)"[^>]*?>(?<CategoryName>[^<]*?)</a>\s
+----- RegexReplace_ChangeCategoryUrl===(?<url>[\s\S]*?)&bbn=[\s\S]+---->${url}==ref=(?<id>[^/]+)/[^?]+\?---->ref=${id}?
+----- Reg_HasProductList===<span[\s]*?class="results-count">[\s]*?<span>[\d]+</span>[\s]*?Results</span>
+----- Reg_GetCode===<div\sclass="hd">[\s]*?<h3[^>]*?>Categories</h3>[\s]*?</div>[\s]*?<div\sclass="bd">((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+/**================================================================================
+================================================================================**/

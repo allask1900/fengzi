@@ -1,0 +1,93 @@
+/*****列表页面代码提取产品代码正则表达式*****/
+<!----------> List_Reg_GetProductCode=====||=====
+<div[^>]*?id="result_[\d]*"[^>]*?>((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+
+
+/*****列表页面正则表达式*****/
+<!----------> List_Reg_GetProductList=====||=====
+<a[^>]*?href="(?<producturl>[^"]*?)"[^>]*?>[\s]*?<div[^>]*?>[\s]*?<img[^>]*?src="(?<smallimage>[^"]*?)"[^>]*?>[\s\S]*?
+<h3[^>]*?>[\s]*?<a[^>]*?>(?<fullname>[\s\S]*?)</a>
+=====<td[\s]*?class="toeOurPrice">[\s]*?<a[^>]*?>\$(?<price>[^<]*?)</a>
+=====<td[\s]*?class="toeNewPrice">[\s]*?<a[^>]*?>\$(?<price>[^<]*?)</a>
+=====<td[\s]*?class="toeOurPriceWithRent">[\s]*?<a[^>]*?>\$(?<price>[^<]*?)</a>
+
+=====<td[\s]*?class="toeUsedPrice">[\s]*?<a[^>]*?>\$(?<usedprice>[^<]*?)</a>
+=====<td[\s]*?class="toeRentPrice">[\s]*?<a[^>]*?>\$(?<rentprice>[^\s]+)[^<]*?</a>
+
+=====<td[\s]*?class="toeListPrice">[\s]*?<strike>\$(?<orgprice>[^<]+)</strike>
+
+
+=====\(<a[^>]*?>(?<scorecount>[\d\,]+)</a>\)
+=====<a[\s]*?alt="(?<score>[\d\.]+)\sout\sof\s5\sstars"
+=====<span[\s]*?class="ptBrand">by(?<author>[\s\S]*?)</span>
+
+/*****列表页面产品Url转换正则表达式*****/
+<!----------> List_Reg_ChangeProductUrl=====||=====
+ref=[\S]+====>
+ 
+/*****分页算法*****/
+<!----------> PageNo_Reg_PagingConfig=====||=====
+=====Reg_GetMaxNoOrMaxCount====<span[\s]*?class="pagnDisabled">(?<pagecount>[^<]*?)</span>[\s]*?<span[^>]*?>[\s]*?<a[^>]*?id="pagnNextLink"
+=====PageUrlStyle====PageNo
+=====MatchNumberType====MaxPageNo
+==========BeginNo====1
+
+
+/*****分页号码替换字符(pno)*****/
+<!----------> PageNo_Reg_RepalcePno=====||=====
+\?====>?page=[pno]&
+
+/*****获得产品参数的正则表达式集合*****/
+<!----------> Product_Reg_GetProductParameter=====||=====
+		
+		====================
+		*****fieldname			====upcorisbn
+		*****getvalue			====<li><b>ISBN-13:</b>(?<upcorisbn>[^<]*?)</li>
+		*****getvalue_replace	==== - ---->
+		
+		====================
+		*****fieldname			====specifications
+		*****getvalue			====<h2>Product\sDetails</h2>[\s]*?<div\sclass="content">[\s]*?<ul>(?<specifications>[\s\S]*?)<li><b>Shipping\sWeight		
+		*****getvalue_replace	====(?<a>[\s\S]+)----><h3>Details</h3><div><ul>${a}</ul></div>								 
+								
+		====================
+		*****fieldname			====content	
+		*****getcode			====<div[^>]*?id="postBodyPS"[^>]*?>((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>	 
+		*****getvalue			====<script[^>]*?id="bookDesc_override_CSS"[^>]*?>[\s\S]*?<noscript>(?<content>[\s\S]*?)</noscript>
+									|||||<div[^>]*?id="postBodyPS"[^>]*?>[\s]*?<div>(?<content>[\s\S]*?)</div>
+		*****getvalue_replace	====<h2>Editorial\sReviews</h2>----><h3>Description</h3>
+									&&&&&<a\shref=[^>]*>[\s\S]*?</a>----> 
+									&&&&&<img[^>]*?>---->
+									&&&&&<h3[^>]*?>Amazon.com</h3>----> 
+									&&&&&Amazon.com---->
+									&&&&&Amazon---->
+									&&&&&<(?<t>[\w]*?)\s[^>]*?>----><${t}>
+                                    &&&&&<h\d>Product\sDescription</h\d>---->
+									
+		====================
+		*****fieldname			====aboutauthor	
+		*****getcode			====<h3[^>]*?>About\sthe\sAuthor</h3>[\s]*?<div[^>]*?>((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>	 
+		*****getvalue			====<h3[^>]*?>About\sthe\sAuthor</h3>[\s]*?<div[^>]*?>(?<aboutauthor>[\s\S]*?)</div>
+		*****getvalue_replace	====<h2>Editorial\sReviews</h2>----><h3>Description</h3>
+									&&&&&<a\shref=[^>]*>[\s\S]*?</a>----> 
+									&&&&&<img[^>]*?>---->
+									&&&&&<h3[^>]*?>Amazon.com</h3>----> 
+									&&&&&Amazon.com---->
+									&&&&&Amazon---->
+									&&&&&<div[^>]*?>---->
+/*****获得产品评论的正则表达式集合*****/
+<!----------> Comment_Reg_GetProductCommentParameter=====||=====
+		====================
+		IsUpdateComment					====   true
+		====================
+		Reg_GetCommentPageUrl			====   <a[^>]*?href="(?<commentpageurl>[^"]*?)"[^>]*?>[\s]*?(<[^>]*?>|)[\s]*?See[\s]*?all[\d,\s]*?customer[\s]*?reviews[\s]*?\(newest[\s]*?first
+		====================
+		Reg_GetCommentMaxPageCount		====   >[\s]*?(?<commentmaxpage>[\d,]+)[\s]*?</a>[\s]*?\|[\s]*?<a[^>]*?>Next
+		====================
+		Replace_CommentPageReplacePno	====   ref=(?<a>[\s\S]*?)&sortBy---->ref=cm_cr_pr_btm_link_[pno]?ie=UTF8&pageNumber=[pno]&showViewpoints=0&sortBy=
+		 
+		====================
+		Reg_GetComment			==== <span>(?<score>[^\s]*?)\sout\sof\s5\sstars</span>[\s]*?</span>[\s]*?</span>[\s]*?
+<span[^>]*?><b>(?<title>[^<]*?)</b>,[\s]*?<nobr>(?<checkindate>[^<]*?)</nobr></span>[\s\S]*?<div[^>]*?>
+(By&nbsp;</div><div[^>]*?><a[^>]*?><span[^>]*?>(?<username>[^<]*?)</span></a>|[\s]*?By[\s]*?<b>(?<username>A[\s]*?Customer)</b>|[\s]*?<b>(?<username>A[\s]*?Kid's[\s]*?Review)</b>)[\s\S]*?
+<div[^>]*?class="reviewText">(?<comment>[^>]*?)</div>[\s]*?<div[\s]*?style="padding\-top\:\s10px;\sclear:\sboth;\swidth:\s100%;">

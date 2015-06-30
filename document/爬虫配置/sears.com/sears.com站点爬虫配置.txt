@@ -1,0 +1,108 @@
+/*****列表页面代码提取产品代码正则表达式*****/
+<!----------> List_Reg_GetProductCode=====||=====
+<div\sclass="hproduct"[^>]*?id="[\d]+">((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+
+/*****列表页面正则表达式*****/
+<!----------> List_Reg_GetProductList=====||=====
+=====<div[^>]*?>[\s]*?<a[^>]*?href="(?<producturl>[^"]*?)"[^>]*?>[\s]*?<img[^>]*?src="(?<smallimage>[^"]*?)"[^>]*?>[\s]*?</a>
+=====<h3[\s]*?itemprop="name">[\s]*?<a[^>]*?>(?<fullname>[^>]*?)</a></h3>
+=====<h4[\s]*?class="price[\s]*?sale">[\s\S]*?<span[\s]*?itemprop="price">\$(?<price>[\d,.]+)</span>[\s\S]*?</h4>
+=====<h4[\s]*?class="msrp">[\s]*?<a[^>]*?>List\sPrice:</a>[\s\S]*?<span>\$(?<orgprice>[\d,.]+)</span>[\s\S]*?</h4>
+
+=====<span[\s]*?itemprop="reviewCount">[\s]*?(?<scorecount>[\d\,]+)[\s]*?</span>
+=====<span[\s]*?itemprop="ratingValue">[\s]*?(?<score>[\d\.]+)[\s]*?</span>
+
+/*****列表页面产品Url转换正则表达式*****/
+<!----------> List_Reg_ChangeProductUrl=====||=====
+\?[\S]+====>
+
+/*****分页算法*****/
+<!----------> PageNo_Reg_PagingConfig=====||=====
+=====Reg_GetMaxNoOrMaxCount====<a[^>]*?>All\sItems\s\((?<ItemCount>[\d\.]+)\)</a>
+=====PageUrlStyle====PageNo /*****值为:PageNo 或者 ItemNo*****/
+=====MatchNumberType====MaxPageNo /*****值为:MaxPageNo或者MaxItemNo*****/
+=====DefaultMaxPageNo====/*****直接设置最大页码*****/
+=====BeginNo====/*****BeginPageNo或者BeginItemNo*****/
+=====PageSize====/*****页码大小*****/
+
+/*****分页号码替换字符(pno)*****/
+<!----------> PageNo_Reg_RepalcePno=====||=====
+\?====>?nrp=50&cp=[pno]&
+
+
+
+/*****产品页面代码截取起止标识(用字符=====分割的两个字符串)*****/
+<!----------> Product_Str_GetCodeBeginAndEnd=====||=====
+
+
+
+
+/*****产品页面Post提交数据*****/
+<!----------> Product_Str_PostData=====||=====
+
+
+
+
+/*****是否分析产品页面*****/
+<!----------> Product_Bool_IsAnalysis=====||=====true
+
+
+
+
+/*****获得产品参数的正则表达式集合*****/
+<!----------> Product_Reg_GetProductParameter=====||=====
+		====================	 
+		*****fieldname	====bigimage
+		*****getvalue 	====<div[\s]*?class="image-gallery-main-slide">[\s]*?<a[\s]*?href="\#">[\s]*?<noscript>[\s]*?<img[^>]*?src="(?<bigimage>[^"]*?)"
+		====================
+		*****fieldname	====model
+		*****getvalue	====<span[\s]*?id="model-value"[^>]*?>(?<model>[^<]*?)</span>
+		====================
+		*****fieldname	====brandname
+		*****getvaule_url====
+		*****getvalue 	====<a[^>]*?>(?<brandname>[^<]*?)</a>[^>]*?<a[^>]*?><span[^>]*?><span>See\sthe\sAmazon\sPage\sfor\sthis\sbrand</span>
+		====================
+		*****fieldname	====specifications
+		*****getcode	====<div[^>]*?id="prodDetails"[^>]*?>((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+							&&&&<div[^>]*?class="container"[^>]*?>((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+                                                |||||<div[^>]*?id="technical-data"[^>]*?>((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+		*****getvalue	====<div[^>]*?class="pdTab"[^>]*?>(?<specifications>[\s\S]*?)</div>
+                                               &&&&&<h2>Technical\sDetails</h2>[\s]*?<div[\s]*?class="content">[\s]*?<ul[^>]*?>(?<specifications>[\s\S]*?)</ul>
+		*****getvalue_replace====<a\shref=[^>]*>[\s\S]*?</a>---->
+								&&&&&<div[^>]*?>----><div>
+		====================
+		*****fieldname			====content
+        *****getcode			====<div[^>]*?id="productDescription"[^>]*?>((?<Nested><div[^>]*>)|</div>(?<-Nested>)|.*?)*</div>
+		*****getvalue			====<div[^>]*?id="productDescription"[^>]*?>(?<content>[\s\S]+)</div>
+		*****getvalue_replace	        ====<a\shref=[^>]*>[\s\S]*?</a>----> 
+									&&&&&<img[^>]*?>---->
+									&&&&&<h3[^>]*?>Amazon.com</h3>----> 
+									&&&&&Amazon.com---->
+									&&&&&<div[^>]*?>----><div>
+                                    &&&&&<h\d>Product\sDescription</h\d>---->
+/*****获得产品评论的正则表达式集合*****/
+<!----------> Comment_Reg_GetProductCommentParameter=====||=====
+		====================
+		IsUpdateComment					====   true
+		====================
+		Reg_GetCommentPageUrl			====   <a[^>]*?href="(?<commentpageurl>[^"]*?)"[^>]*?>[\s]*?(<[^>]*?>|)[\s]*?See[\s]*?all[\d,\s]*?customer[\s]*?reviews[\s]*?\(newest[\s]*?first
+		====================
+		Reg_GetCommentMaxPageCount		====   >[\s]*?(?<commentmaxpage>[\d,]+)[\s]*?</a>[\s]*?\|[\s]*?<a[^>]*?>Next
+		====================
+		Replace_CommentPageReplacePno	====   ref=(?<a>[\s\S]*?)&sortBy---->ref=cm_cr_pr_btm_link_[pno]?ie=UTF8&pageNumber=[pno]&showViewpoints=0&sortBy=
+		 
+		====================
+		Reg_GetComment			==== <span>(?<score>[^\s]*?)\sout\sof\s5\sstars</span>[\s]*?</span>[\s]*?</span>[\s]*?
+<span[^>]*?><b>(?<title>[^<]*?)</b>,[\s]*?<nobr>(?<checkindate>[^<]*?)</nobr></span>[\s\S]*?<div[^>]*?>
+(By&nbsp;</div><div[^>]*?><a[^>]*?><span[^>]*?>(?<username>[^<]*?)</span></a>|[\s]*?By[\s]*?<b>(?<username>A[\s]*?Customer)</b>|[\s]*?<b>(?<username>A[\s]*?Kid's[\s]*?Review)</b>)[\s\S]*?
+<div[^>]*?>(?<comment>[^>]*?)<div[\s]*?style="padding\-top\:\s10px;\sclear:\sboth;\swidth:\s100%;">
+		
+	 
+/*****产品商家价格更新 页面截取起止标识(用字符=====分割的两个字符串)*****/
+<!----------> UpdatePrice_Str_GetCodeBeginAndEnd=====||=====
+
+
+
+
+/*****价格更新时得到价格的链接或价格的正则表达式集合*****/
+<!----------> UpdatePrice_Reg_GetPrice=====||=====

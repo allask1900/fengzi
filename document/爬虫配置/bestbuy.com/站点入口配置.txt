@@ -1,0 +1,23 @@
+MaxLevel===4
+/**==========第0级==========**/
+----- CategoryLevel===0
+----- IsSaveParent===false
+----- FirstCategoryNameAndUrl===Computers==http://www.bestbuy.com/site/Electronics/Computers-PCs/abcat0500000.c?id=abcat0500000
+----- FirstCategoryNameAndUrl===Movies & TV==http://www.bestbuy.com/site/Music-Movies/DVD-Blu-Ray-Movies-TV/cat02015.c?id=cat02015
+----- FirstCategoryNameAndUrl===Music==http://www.bestbuy.com/site/Music-Movies/Music/cat02001.c?id=cat02001
+----- FirstCategoryNameAndUrl===Software==http://www.bestbuy.com/site/Computers-PCs/Software-Games/abcat0508000.c?id=abcat0508000
+----- FirstCategoryNameAndUrl===Video Games==http://www.bestbuy.com/site/electronics/video-games/abcat0700000.c?id=abcat0700000
+----- FirstCategoryNameAndUrl===Electronics >> TV & Home Theater==http://www.bestbuy.com/site/Electronics/TV-Video/abcat0100000.c?id=abcat0100000
+----- FirstCategoryNameAndUrl===Electronics >> Car Electronics & GPS==http://www.bestbuy.com/site/Electronics/Car-Audio-GPS/abcat0300000.c?id=abcat0300000
+----- FirstCategoryNameAndUrl===Electronics >> Audio & MP3==http://www.bestbuy.com/site/Electronics/Audio/abcat0200000.c?id=abcat0200000
+----- FirstCategoryNameAndUrl===Electronics >> Cameras & Camcorders==http://www.bestbuy.com/site/Electronics/Cameras-Camcorders/abcat0400000.c?id=abcat0400000
+----- FirstCategoryNameAndUrl===Electronics >> Cell Phones==http://www.bestbuy.com/site/Electronics/Mobile-Cell-Phones/abcat0800000.c?id=abcat0800000
+/**==========第1级==========**/
+----- CategoryLevel===1
+----- IsSaveParent===true
+----- Reg_GetCategory===<li><a\shref=[\'\"]{1}(?<CategoryUrl>[^\s]*?)[\'\"]{1} [^>]*?>(?<CategoryName>[^<]*?)</a></li>
+----- RegexReplace_ChangeCategoryUrl===(?<url>[\s\S]*?)&bbn=[\s\S]+---->${url}==ref=(?<id>[^/]+)/[^?]+\?---->ref=${id}?
+----- Reg_HasProductList===<a[^>]*?>All\sItems\s\([\d\.]+\)</a>
+----- Reg_GetCode===<ul[\s]*?class="search[\s]*?cat">((?<Nested><ul[^>]*>)|</ul>(?<-Nested>)|.*?)*</ul>|||||<ul[\s]*?class="search">[\s]*?<li[\s]*?class="title">Genre</li>((?<Nested><ul[^>]*>)|</ul>(?<-Nested>)|.*?)*</ul>
+/**================================================================================
+================================================================================**/

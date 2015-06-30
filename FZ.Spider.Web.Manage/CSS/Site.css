@@ -1,0 +1,470 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    background: #b6b7bc;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+    width:100%
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 99%;
+    background-color: #fff; 
+    border: 1px solid #496077;
+    padding: 0px;
+    margin:0px auto;
+}
+.main
+{ 
+    min-height: 100%;
+    width:100%; 
+    margin: 0px;
+    padding: 0px;
+}
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+
+.header h1
+{ 
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 1.5em;
+    font-size: 1.5em;
+}
+
+
+ 
+.footer
+{
+	width: 100%;
+	height:60px;
+    color: #4e5766;
+    background:#4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+	float:left; 
+    width:10%;
+	height: 650px;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+     
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+     width:auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 280px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 280px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 44%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+    height:40px;
+    padding:10px;
+    
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+    height:40px;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+} 
+.NavTitle
+{
+	font-size: 20px;
+	line-height: 24px;
+	color: #222222;
+	text-indent: 5px;
+	font-weight: bolder;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 0px;
+	border-bottom: #9CB2C6 3px solid;
+}
+    .STYLE13 {color: #006666}
+    
+.btn
+{
+	HEIGHT: 24px;
+	margin-top:5px;
+	border:1px solid #738ECE;
+	background-color:#C6E3F7;font-weight:bold;
+	cursor:pointer;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#ffffffff',EndColorStr='#C6E3F7');   
+	}
+ 
+.ddl
+{
+	BORDER:#9CB2C6 1px solid;
+	FONT-SIZE:   12px;
+	font-weight:bold;
+	line-height:22px;
+	height:22px;
+	COLOR:   #000000;
+	margin-left:3px;
+	width:100px;
+}
+
+.ClassTitle { font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #1861bd;
+}
+
+.NavigationStyle {color:#1861bd;}
+.TB
+{
+	line-height:24px;
+	BORDER:#9CB2C6 1px solid;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:10px;
+	width:98%;
+	border-spacing:0px;
+	padding:2px;text-indent:5px;
+	}
+.TB
+{
+	line-height: 24px;
+	border: #9CB2C6 1px solid;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	width: 64%;
+	border-spacing: 0px;
+	padding: 2px;
+	text-indent: 5px;	
+}
+.Txt
+{
+	BORDER:#9CB2C6 1px solid;
+	FONT-SIZE:   12px;
+	font-weight:bold;
+	line-height:17px;
+	COLOR:   #000000;
+	margin-left:3px;
+	}
+.Txt
+{
+	border: #9CB2C6 1px solid;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 17px;
+	color: #000000;
+	margin-left: 3px;
+}
+	
+TEXTAREA 
+{
+	BORDER:#9CB2C6 1px solid;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align:left;margin-left:5px;
+  }
+
+TEXTAREA
+{
+	border: #9CB2C6 1px solid;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	margin-left: 5px;
+}
+        .style2
+        {
+            font-size: 12px;
+            line-height: 16px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+        .style3
+        {
+            height: 40px;
+        }
+    .TB_Grid
+    {
+	    line-height: 40px;
+	    border: #9CB2C6 1px solid;
+	    margin-top: 5px;
+	    margin-bottom: 5px;
+	    margin-left: 5px;
+	    width: 98%;
+	    border-spacing: 0px;
+	    padding: 2px;
+    }
+     .TB_Grid_log
+    {
+	    line-height: 20px;
+	    border: #9CB2C6 1px solid;	    
+	    width: 98%;
+	    border-spacing: 0px;
+	    padding: 2px;
+    }
+    .TB_Grid_2
+    {
+	    line-height: 15px;
+	    border: #DFD9F7 1px solid;
+	    margin-top: 5px;
+	    margin-bottom: 5px;
+	    margin-left: 5px;
+	    width: 98%;
+	    border-spacing: 0px;
+	    padding: 2px;
+    }
+.WordsBreak {
+	word-break:break-all; 
+}
+    
+  
+        .style4
+        {
+            width: 6%;
+            font-size: 12px;
+            line-height: 16px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+        .style5
+        {
+            width: 20%;
+            font-size: 12px;
+            line-height: 16px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+        .style6
+        {
+            width: 12%;
+            font-size: 12px;
+            line-height: 16px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+        .style7
+        {
+            width: 42%;
+            font-size: 12px;
+            line-height: 16px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }

@@ -1,0 +1,21 @@
+MaxLevel===4
+/**==========第0级==========**/
+----- CategoryLevel===0
+----- IsSaveParent===false
+----- FirstCategoryNameAndUrl===Computers==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=computers
+----- FirstCategoryNameAndUrl===Movies & TV==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=movies-tv
+----- FirstCategoryNameAndUrl===Music==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=popular
+----- FirstCategoryNameAndUrl===Software==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=software
+----- FirstCategoryNameAndUrl===Video Games==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=videogames
+----- FirstCategoryNameAndUrl===Electronics==http://www.amazon.com/s/ref=nb_sb_noss?search-alias=electronics
+
+
+/**==========第1级==========**/
+----- CategoryLevel===1
+----- IsSaveParent===true
+----- Reg_GetCategory===<a[\s]*?href="(?<CategoryUrl>[^"]*?)">[\s]*?<span[\s]*?class="refinementLink"[\s]*?>(?<CategoryName>[^<]*?)</span>
+----- RegexReplace_ChangeCategoryUrl===(?<url>[\s\S]*?)&bbn=[\s\S]+---->${url}==ref=(?<id>[^/]+)/[^?]+\?---->ref=${id}?
+----- Reg_HasProductList===Showing[^<]*?Results
+----- Reg_GetCode===<h2[^>]*?>Department</h2>[\s]*?<ul[^>]*?>((?<Nested><ul[^>]*>)|</ul>(?<-Nested>)|.*?)*</ul>
+/**================================================================================
+================================================================================**/
