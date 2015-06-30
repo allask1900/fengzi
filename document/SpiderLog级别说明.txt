@@ -1,4 +1,0 @@
-DEBUG < INFO < WARN < ERROR < FATAL
-性能相关的 DEBUG
-流程相关的 INFO
-爬虫出错的 WARN < ERROR < FATAL
